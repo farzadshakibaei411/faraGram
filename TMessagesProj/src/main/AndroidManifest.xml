@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.finalsoft.netgram"
+    package="com.finalsoft.faragram"
     android:installLocation="auto">
 
     <supports-screens
@@ -240,7 +240,7 @@
                 android:resource="@xml/contacts" />
         </service>
         <service
-            android:name="com.finalsoft.netgram.TgChooserTargetService"
+            android:name="com.finalsoft.TgChooserTargetService"
             android:label="@string/AppName"
             android:permission="android.permission.BIND_CHOOSER_TARGET_SERVICE">
             <intent-filter>
@@ -248,53 +248,53 @@
             </intent-filter>
         </service>
         <service
-            android:name="com.finalsoft.netgram.NotificationsService"
+            android:name="com.finalsoft.NotificationsService"
             android:enabled="true" />
         <service
-            android:name="com.finalsoft.netgram.NotificationRepeat"
+            android:name="com.finalsoft.NotificationRepeat"
             android:exported="false" />
         <service
-            android:name="com.finalsoft.netgram.ClearCacheService"
+            android:name="com.finalsoft.ClearCacheService"
             android:exported="false" />
         <service
-            android:name="com.finalsoft.netgram.VideoEncodingService"
+            android:name="com.finalsoft.VideoEncodingService"
             android:enabled="true" />
         <service
-            android:name="com.finalsoft.netgram.MusicPlayerService"
+            android:name="com.finalsoft.MusicPlayerService"
             android:enabled="true"
             android:exported="true" />
         <service
-            android:name="com.finalsoft.netgram.MusicBrowserService"
+            android:name="com.finalsoft.MusicBrowserService"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.media.browse.MediaBrowserService" />
             </intent-filter>
         </service>
 
-        <receiver android:name="com.finalsoft.netgram.MusicPlayerReceiver">
+        <receiver android:name="com.finalsoft.MusicPlayerReceiver">
             <intent-filter>
-                <action android:name="com.finalsoft.netgram.musicplayer.close" />
-                <action android:name="com.finalsoft.netgram.musicplayer.pause" />
-                <action android:name="com.finalsoft.netgram.musicplayer.next" />
-                <action android:name="com.finalsoft.netgram.musicplayer.play" />
-                <action android:name="com.finalsoft.netgram.musicplayer.previous" />
+                <action android:name="com.finalsoft.musicplayer.close" />
+                <action android:name="com.finalsoft.musicplayer.pause" />
+                <action android:name="com.finalsoft.musicplayer.next" />
+                <action android:name="com.finalsoft.musicplayer.play" />
+                <action android:name="com.finalsoft.musicplayer.previous" />
                 <action android:name="android.intent.action.MEDIA_BUTTON" />
                 <action android:name="android.media.AUDIO_BECOMING_NOISY" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.finalsoft.netgramAppStartReceiver"
+            android:name="com.finalsoft.AppStartReceiver"
             android:enabled="true">
             <intent-filter>
-                <action android:name="com.finalsoft.netgram.start" />
+                <action android:name="com.finalsoft.start" />
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
         <receiver
-            android:name="com.finalsoft.netgram.WearReplyReceiver"
+            android:name="com.finalsoft.WearReplyReceiver"
             android:enabled="true" />
         <receiver
-            android:name="com.finalsoft.netgram.ShareBroadcastReceiver"
+            android:name="com.finalsoft.ShareBroadcastReceiver"
             android:enabled="true" />
 
         <uses-library
@@ -323,7 +323,7 @@
             android:name="com.google.android.gms.car.application"
             android:resource="@xml/automotive_app_desc" />
 
-        <activity android:name="com.finalsoft.netgram.ui.about"
+        <activity android:name="com.finalsoft.ui.about"
             android:theme="@style/Theme.AppCompat.Light">
         </activity>
     </application>
